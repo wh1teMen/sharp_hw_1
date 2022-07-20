@@ -60,38 +60,24 @@ else
     if (num9 == r5 && num10 == r6 || num9 == r6 && num10 == r5) Console.WriteLine($"{r1}{r2}{r3}{r4}{r6}{r5}");
 }
 
-/*Console.WriteLine("Задача6\nВведите показания температуры: ");
+Console.WriteLine("Задача #6\nВведите показания температуры: ");
 int t = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Выбирите, во что перевести градусы?   Цельсий - 1 / Фаренгейт - 2");
 int tmp= Convert.ToInt32(Console.ReadLine());
-if (tmp == 1)
-{
-    int a = 5 / 9 * (t - 32);
-    Console.WriteLine($"{a} Цельсий");
-}
-if(tmp==2)Console.WriteLine($"{9 / 5 * t + 32} Фаренгейта");
+if (tmp == 1)Console.WriteLine($"{5.0 / 9.0 * (t - 32)} Цельсий");
+if(tmp==2)Console.WriteLine($"{9.0 / 5.0 * t + 32} Фаренгейта");
 
-*/
 
-/*switch (t){
-    case 1:
-        Console.WriteLine("Перевести температуру в Цельсий");
-        Console.WriteLine($"{5 / 9 * (t - 32)} Цельсий"); break; 
-    case 2:Console.WriteLine("Перевести температуру в Фаренгейта");
-        Console.WriteLine($"{9/5 * t + 32} Фаренгейта"); break;
-    default:Console.WriteLine("ошибка");break;
 
-}
 
-*/
 Console.WriteLine("Задача #7\nВведите диапазон от и до");
 int a = Convert.ToInt32(Console.ReadLine());
 int b = Convert.ToInt32(Console.ReadLine());
 if (a > b)
 {
-    int tmp = a;
+    int tm = a;
     a = b; 
-    b = tmp;
+    b = tm;
 }
 int i;
 for( i = a; i <= b; i++)
