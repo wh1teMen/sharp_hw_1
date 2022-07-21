@@ -1,33 +1,34 @@
 ﻿using System;
 
 Console.WriteLine("Задача #1\nВведите число в диапазоне от 1 до 100: ");
-int num=Convert.ToInt32(Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 if (num > 100 || num < 1)
 {
     Console.WriteLine("Ошибка");
 }
-else { 
-if (num % 3 == 0 && num % 5 != 0) Console.WriteLine("Fizz");
-if (num % 5 == 0 && num % 3 != 0)Console.WriteLine("Buzz");
-if (num % 3 == 0 && num % 5 == 0) Console.WriteLine("Fizz Buzz");
-if (num % 3 != 0 && num % 5 != 0) Console.WriteLine(num);
- }  
+else
+{
+    if (num % 3 == 0 && num % 5 != 0) Console.WriteLine("Fizz");
+    if (num % 5 == 0 && num % 3 != 0) Console.WriteLine("Buzz");
+    if (num % 3 == 0 && num % 5 == 0) Console.WriteLine("Fizz Buzz");
+    if (num % 3 != 0 && num % 5 != 0) Console.WriteLine(num);
+}
 
 
 Console.WriteLine("Задача #2\nВведите два числа: ");
 double num2 = Convert.ToDouble(Console.ReadLine());
 double num3 = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine($"{num3} % от {num2} = {(num2*num3)/100}") ;
+Console.WriteLine($"{num3} % от {num2} = {(num2 * num3) / 100}");
 
 Console.WriteLine("Задача #3\nВведите четыре числа: ");
-int num4=Convert.ToInt32(Console.ReadLine());   
-int num5=Convert.ToInt32(Console.ReadLine());
-int num6=Convert.ToInt32(Console.ReadLine());
-int num7=Convert.ToInt32(Console.ReadLine());
+int num4 = Convert.ToInt32(Console.ReadLine());
+int num5 = Convert.ToInt32(Console.ReadLine());
+int num6 = Convert.ToInt32(Console.ReadLine());
+int num7 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"{num4}{num5}{num6}{num7}");
 
 Console.WriteLine("Задача #4\nВведите шестизначное число числа: ");
-int num8= Convert.ToInt32(Console.ReadLine());
+int num8 = Convert.ToInt32(Console.ReadLine());
 if (num8 < 100000 || num8 > 999999)
 {
     Console.WriteLine("Ошибка!!! Введено не корректно число!");
@@ -59,16 +60,22 @@ else
     if (num9 == r4 && num10 == r6 || num9 == r6 && num10 == r4) Console.WriteLine($"{r1}{r2}{r3}{r6}{r5}{r4}");
     if (num9 == r5 && num10 == r6 || num9 == r6 && num10 == r5) Console.WriteLine($"{r1}{r2}{r3}{r4}{r6}{r5}");
 }
+Console.WriteLine("Задача #5\nВведите дату в формате ден.месяц.год");
+int day = int.Parse(Console.ReadLine());
+int month = int.Parse(Console.ReadLine());
+int year = int.Parse(Console.ReadLine());
+DateTime date1 = new DateTime(year, month, day);
+if (month == 1 || month == 2 || month == 12) Console.WriteLine($"Winter {date1.DayOfWeek.ToString()}");
+if (month == 3 || month == 4 || month == 5) Console.WriteLine($"Spring {date1.DayOfWeek.ToString()}");
+if (month == 6 || month == 7 || month == 8) Console.WriteLine($"Summer {date1.DayOfWeek.ToString()}");
+if (month == 9 || month == 10 || month == 111) Console.WriteLine($"Autumn {date1.DayOfWeek.ToString()}");
 
 Console.WriteLine("Задача #6\nВведите показания температуры: ");
 int t = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Выбирите, во что перевести градусы?   Цельсий - 1 / Фаренгейт - 2");
-int tmp= Convert.ToInt32(Console.ReadLine());
-if (tmp == 1)Console.WriteLine($"{5.0 / 9.0 * (t - 32)} Цельсий");
-if(tmp==2)Console.WriteLine($"{9.0 / 5.0 * t + 32} Фаренгейта");
-
-
-
+int tmp = Convert.ToInt32(Console.ReadLine());
+if (tmp == 1) Console.WriteLine($"{5.0 / 9.0 * (t - 32)} Цельсий");
+if (tmp == 2) Console.WriteLine($"{9.0 / 5.0 * t + 32} Фаренгейта");
 
 Console.WriteLine("Задача #7\nВведите диапазон от и до");
 int a = Convert.ToInt32(Console.ReadLine());
@@ -76,11 +83,11 @@ int b = Convert.ToInt32(Console.ReadLine());
 if (a > b)
 {
     int tm = a;
-    a = b; 
+    a = b;
     b = tm;
 }
 int i;
-for( i = a; i <= b; i++)
+for (i = a; i <= b; i++)
 {
-    if (i % 2 == 0) Console.Write($"{i} "); 
+    if (i % 2 == 0) Console.Write($"{i} ");
 }
